@@ -3,7 +3,7 @@
 echo "This script is the test script to organize the newly loaded files." && sleep 5
 echo "Running"
 
-touch TestDir
+mkdir TestDir
 sudo mv shutdown-listener.py /home/BashPink/TestDir
 
 echo "Done"
