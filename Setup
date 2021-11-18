@@ -11,10 +11,10 @@ sudo mv shutdown-listener.sh /etc/init.d/
 sudo chmod +x /etc/init.d/shutdown-listener.sh
 sudo update-rc.d shutdown-listener.sh defaults
 
-echo "Done!$(tput srg0)" && sleep 2
+echo "Done!" && sleep 2
 echo "Starting Initial Service"
 
-sudo /etc/init.d/listen-for-shutdown.sh start
+sudo /etc/init.d/shutdown-listener.sh start
 
 sudo rm Setup
 
