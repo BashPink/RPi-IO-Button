@@ -1,0 +1,22 @@
+#!/bin/bash/
+
+echo "$(tput setaf 7)$(tput setaf 4)Please wait while the script is configured" && sleep 3
+
+sudo mv shutdown-listener.py /usr/local/bin/
+sudo chmod +x /usr/local/bin/shutdown-listener.py
+
+echo "Almost Done" && sleep 2
+
+sudo mv shutdown-listener.sh /etc/init.d/
+sudo chmod +x /etc/init.d/shutdown-listener.sh
+sudo update-rc.d shutdown-listener.sh defaults
+
+echo "Done!$(tput srg0)" && sleep 2
+echo "Starting Initial Service"
+
+sudo /etc/init.d/listen-for-shutdown.sh start
+
+sudo rm Setup
+
+exit 0
+
