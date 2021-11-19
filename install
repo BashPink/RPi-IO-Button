@@ -13,6 +13,9 @@ echo -ne '####################   (90%)\r'
 sudo update-rc.d shutdown-listener.sh defaults && sleep 2
 echo -ne '#######################(100%)\r'
 sudo rm install
+echo -ne '\n'
+sleep 1
+sudo /etc/init.d/shutdown-listener.sh start
 echo "Complete" && sleep 2
 exit 0
 
