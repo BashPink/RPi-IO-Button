@@ -2,16 +2,17 @@
 
 echo "$(tput setaf 3)Please wait while the script is configured" && sleep 1
 
-sudo mv shutdown-listener.py /usr/local/bin/
-sudo chmod +x /usr/local/bin/shutdown-listener.py
-
-sudo mv shutdown-listener.sh /etc/init.d/
-sudo chmod +x /etc/init.d/shutdown-listener.sh
-sudo update-rc.d shutdown-listener.sh defaults
-
-echo "Done installing!" && sleep 1
-
+sudo mv shutdown-listener.py /usr/local/bin/ && sleep 2
+echo -ne '#                      (10%)\r'
+sudo chmod +x /usr/local/bin/shutdown-listener.py && sleep 2
+echo -ne '######                 (30%)\r'
+sudo mv shutdown-listener.sh /etc/init.d/ && sleep 2
+echo -ne '##############         (60%)\r'
+sudo chmod +x /etc/init.d/shutdown-listener.sh && sleep 2
+echo -ne '####################   (90%)\r'
+sudo update-rc.d shutdown-listener.sh defaults && sleep 2
+echo -ne '#######################(100%)\r'
 sudo rm install
-
+echo "Complete" && sleep 2
 exit 0
 
