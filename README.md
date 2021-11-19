@@ -14,7 +14,7 @@ cable managment and I can vouch that this set up works
 
 In Termincal type 
 
-                  sudo git clone www.https://github.com/BashPink/RPi-IO
+                  sudo git clone https://github.com/BashPink/RPi-IO
 
                   cd RPi-IO
                   
