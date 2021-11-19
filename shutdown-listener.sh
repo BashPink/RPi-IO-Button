@@ -1,7 +1,7 @@
 #! /bin/sh
 
 ### BEGIN INIT INFO
-# Provides:          scriptname
+# Provides:          shutdown-listener.py
 # Required-Start:    $remote_fs $syslog
 # Required-Stop:     $remote_fs $syslog
 # Default-Start:     2 3 4 5
@@ -18,7 +18,7 @@ case "$1" in
     pkill -f /usr/local/bin/shutdown-listener.py
     ;;
   *)
-    echo "Usage: /etc/init.d/shutdown-listener.sh
+    echo "Usage: /etc/init.d/shutdown-listener.sh"
     exit 1
     ;;
 esac
