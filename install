@@ -16,6 +16,6 @@ sudo rm install
 echo -ne '\n'
 sleep 1
 sudo /etc/init.d/shutdown-listener.sh start
-echo "Complete" && sleep 2
+echo "Completed Install" && sleep 2
 exit 0
 
