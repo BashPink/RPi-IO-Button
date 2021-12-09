@@ -1,4 +1,4 @@
-#RPi-IO
+# RPi-IO
 
 This script was created to allow a viable solution to using an On/Off Button with a Raspberry Pi. 
 
