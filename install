@@ -1,21 +1,36 @@
 #!/bin/bash/
 
-echo "$(tput setaf 3)Please wait while the script is configured" && sleep 1
+echo "$(tput setaf 3)Please wait while the script is configured" && sleep 2
 
 sudo mv shutdown-listener.py /usr/local/bin/ && sleep 1
-echo -ne '#                      (10%)\r'
+echo -ne '#                   (05%)\r' && sleep .5
+echo -ne '##                  (10%)\r' && sleep .5
 sudo chmod +x /usr/local/bin/shutdown-listener.py && sleep 1
-echo -ne '######                 (30%)\r'
+echo -ne '###                 (15%)\r' && sleep .5
+echo -ne '####                (20%)\r' && sleep .5
 sudo mv shutdown-listener.sh /etc/init.d/ && sleep 1
-echo -ne '##############         (60%)\r'
+echo -ne '#####               (25%)\r' && sleep .5
+echo -ne '######              (30%)\r' && sleep .5
+echo -ne '#######             (35%)\r' && sleep .5
+echo -ne '########            (40%)\r' && sleep .5
 sudo chmod +x /etc/init.d/shutdown-listener.sh && sleep 1
-echo -ne '####################   (90%)\r'
+echo -ne '#########           (45%)\r' && sleep .1
+echo -ne '##########          (50%)\r' && sleep .1
+echo -ne '###########         (55%)\r' && sleep .1
+echo -ne '############        (60%)\r' && sleep .1
+echo -ne '#############       (65%)\r' && sleep .1
+echo -ne '##############      (70%)\r' && sleep .1
+echo -ne '###############     (75%)\r' && sleep .1
+echo -ne '################    (80%)\r' && sleep .5
+echo -ne '#################   (85%)\r' && sleep .1
+echo -ne '##################  (90%)\r' && sleep .1
 sudo update-rc.d shutdown-listener.sh defaults && sleep 1
-echo -ne '#######################(100%)\r'
+echo -ne '################### (95%)\r' && sleep .5
+echo -ne '####################(100%)\r' && sleep 3
 sudo rm install
 echo -ne '\n'
 sleep 1
 sudo /etc/init.d/shutdown-listener.sh start
-echo "Completed Install" && sleep 2
+echo "Your install is complete." && sleep 2
 exit 0
 
