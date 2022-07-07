@@ -7,7 +7,7 @@ sudo chmod +x /usr/local/bin/shutdown-listener.py
 sudo mv shutdown-listener.sh /etc/init.d/
 sudo chmod +x /etc/init.d/shutdown-listener.sh
 sudo update-rc.d shutdown-listener.sh defaults
-sudo rm install
+sudo rm install README.md
 sudo /etc/init.d/shutdown-listener.sh start
 
 echo "Your install is complete." && sleep 1
