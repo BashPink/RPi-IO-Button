@@ -1,0 +1,13 @@
+Wiring of the tactile switch is set by default on GPIO 3 which is pin 5. 
+The wiring can be changed by altering the "shutdown-listener.py" script.
+
+How To:
+# Using nano type the command [ sudo nano shutdown-listener.py ] 
+while in the RPi_IO directory.
+# Edit the lines that read:
+    GPIO.setup(3, GPIO.IN, pull_up_down=GPIO.PUD_UP)                 #Pins for I/O Button
+    GPIO.wait_for_edge(3, GPIO.FALLING)
+Change the number (in this case 3) to the GPIO that you want to use. 
+# Press CTRL-X 
+# Press Y to save changes
+# Maunual Reboot with [ sudo reboot now ].
