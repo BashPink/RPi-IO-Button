@@ -27,3 +27,7 @@ In some cases, the start script will post an internal error. So it may be necess
 You can test the pins to see if the command above is needed. 
 
 Please report any issues. I'd be happy to look into them!
+
+# PLanned Features for Future Updates
+-CLI options for verbose mode and help menu
+-OLED Output for monitoring CPU Temp, CPU Usage, Memory Usage, Ram, etc...
