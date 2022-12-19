@@ -1,5 +1,5 @@
 Wiring of the tactile switch is set by default on GPIO 3 which is pin 5. 
-The wiring can be changed by altering the "shutdown-listener.py" script.
+The wiring can be changed by altering the "Spyglass_PC.py" script.
 
 How To:
 # Using nano type the command [ sudo nano shutdown-listener.py ] 
