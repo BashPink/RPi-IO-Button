@@ -2,14 +2,18 @@
 
 echo "$(tput setaf 6)Please wait while the script is configured"
 
-sudo mv shutdown-listener.py /usr/local/bin/
+sudo mv Spyglass_PC.py /usr/local/bin/
+echo "SpyGlass Power Controller nested in /usr/local/bin/"
 sudo chmod +x /usr/local/bin/shutdown-listener.py
-sudo mv shutdown-listener.sh /etc/init.d/
+echo "SpyGlass Power Controller is now executable"
+sudo mv Spyglass_PC.sh /etc/init.d/
+echo "Spyglass Power Controller now listens from boot"
 sudo chmod +x /etc/init.d/shutdown-listener.sh
-sudo update-rc.d shutdown-listener.sh defaults
+sudo update-rc.d Spyglass_PC.sh defaults
+echo "Updating rc.d"
 sudo rm install README.md
-sudo /etc/init.d/shutdown-listener.sh start
-
-echo "Your install is complete." && sleep 1
+echo "Cleaning up."
+sudo /etc/init.d/Spyglass_PC.sh start
+echo "Started SpyGlass Power Controller for the first time"
 exit 0
 
