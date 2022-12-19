@@ -12,7 +12,7 @@ It is confirmed compatable with Raspbian/Debian as of 11/18/2021.
 The button should be wired to GPIO 3(pin 5) and any ground but pin 6 right across from GPIO 3 grants better 
 cable managment and I can vouch that this set up works
 
-In Termincal type 
+CLI Commands: 
 
                   sudo git clone https://github.com/BashPink/RPi-IO
 
@@ -22,7 +22,7 @@ In Termincal type
                              
 In some cases, the start script will post an internal error. So it may be necessary to use the command:
 
-[sudo /etc/init.d/shutdown-listener.sh].
+[sudo /etc/init.d/Spyglass_PC.sh].
 
 You can test the pins to see if the command above is needed. 
 
