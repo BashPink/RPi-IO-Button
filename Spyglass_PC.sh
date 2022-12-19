@@ -1,7 +1,7 @@
 #! /bin/sh
 
 ### BEGIN INIT INFO
-# Provides:          shutdown-listener.py
+# Provides:          Spyglass_PC.py
 # Required-Start:    $remote_fs $syslog
 # Required-Stop:     $remote_fs $syslog
 # Default-Start:     2 3 4 5
@@ -11,14 +11,14 @@
 case "$1" in
   start)
     echo "Starting Listener"
-    /usr/local/bin/shutdown-listener.py &
+    /usr/local/bin/Spyglass_PC.py &
     ;;
   stop)
     echo "Stopping Listener"
-    pkill -f /usr/local/bin/shutdown-listener.py
+    pkill -f /usr/local/bin/Spyglass_PC.py
     ;;
   *)
-    echo "Usage: /etc/init.d/shutdown-listener.sh"
+    echo "Usage: /etc/init.d/Spyglass_PC.sh"
     exit 1
     ;;
 esac
